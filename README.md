@@ -69,6 +69,29 @@ L1：《书生浦语大模型全链路开源体系》 By 人工智能实验室�
 
    支持多种类型的智能体能力：ReAct、ReWoo、AutoGPT
 
+L2：轻松玩转书生浦语趣味demo（任宇鹏）
+
+Demo实战的任务内容
+
+1. 实战部署InternLM2-Chat-1.8B
+创建Intern Studio开发机（https://github.com/InternLM/Tutorial），通过Modelscope下载InternLM2-Chat-1.8B模型，完成Client Demo的部署和交互
+* 1）创建开发机
+* 2）下载InternLM2-Chat-1.8B模型
+* 3）部署本地Client Demo
+
+3. 实战部署“八戒-Chat-1.8B”
+通过部署OpenXLab部署XiYou系列的八戒-Chat-1.8B模型，完成Web Demo的部署和交互
+
+4. 实战进阶 运行Lagent智能体Demo
+实战算力升级后，以InternLM2-Chat-7B为基础，运行开源框架Lagent的智能体Demo
+* 1)了解Lagent智能体
+* 2）部署InternLM2-Chat-7B
+* 3）体验与智能体Demo的聊天互动
+
+6. 实战进阶 灵笔InternLM-XComposer2
+浅尝多模态实践，通过internLM-XComposer2模型实现更强大的视觉问答和图文生成式写作
+
+   
 
 
 
