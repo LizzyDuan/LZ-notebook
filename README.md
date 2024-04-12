@@ -38,7 +38,7 @@ By 人工智能实验室陈凯老师 https://www.bilibili.com/video/BV1Vx421X72D
 
 随着训练数据语料升级，下游任务性能增强
 
-# 五、InternLM2的主要两点
+# 五、InternLM2的主要亮点
 
 1. 超长上下文（20万token上下文）
 2. 综合性能全面提升（推理、数学、代码 InternLM-20B 重点测评比肩ChatGPT）
