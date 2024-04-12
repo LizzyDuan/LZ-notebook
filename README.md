@@ -118,10 +118,84 @@ Demo实战的任务内容
     
     * RAG 工作流程
     * ![549045950014864942](https://github.com/LizzyDuan/LZ-notebook/assets/165522321/fc55d96c-eca7-48c5-8216-d8183d683cae)
+
+    * RAG 发展历程
+      > Naive RAG（简单问答，信息检索）
+      > Advance RAG （摘要生成，内容推荐） GOOD!!!!!
+      > Module RAG （多模态任务，对话系统）
+
+    * RAG 常见优化方法
+      > 嵌入优化 Embedding Optimization ：结合稀疏和密集检索，多任务
+      > 索引优化 Indexing Optimization ： 细粒度分割chunk，元数据
+      > 查询优化 Query Optimization ：Advance RAG 前检索 ---查询扩展、转换，多查询
+      > 上下文管理 Context Curation ： Advance RAG 后检索 ---重排rerank，上下文选择/压缩
+      > 迭代检索 Interative Retrieval ： 根据初始查询和迄今为止生成的文本进行重复搜索
+      > 递归检索 Recusive Retrieval ：迭代细化搜索查询，链式推理Chain-of-Thought指导检索过程
+      > 自适应检索 Adaptive Retrieval ：Flare，Self-RAG， 使用LLMs主动决定检索的最佳实际和内容
+      > LLM微调 LLM fine-tuning ：检索/生成/双重微调
+      
+     * RAG vs 微调Fine-tuning
+       > RAG:小数据样本的开放问答，动态数据库更新，实时新闻；高度依赖基础大模型性能，数据库品质很重要。
+       > Fine-tuning：参数记忆，通过在特定任务数据上训练，需要大量标注数据来进行有效微调；需要特别多的数据量，每次信息更新都要新微调。
+       
+    * LLM模型优化方法
+       >
+    * 评估框架和基准测试
+       > [经典评估指标]
+       >> 准确率、召回率、F1分数、BLEU分数（用于机器翻译和文本生成）、ROUGE分数（用于文本生成的评估）
+       > [RAG评测框架]
+       >> 基准测试、RGB、RECALL、CRUD
+       >> 评测工具：RAGAS、ARES、TruLens
+       
+    * RAG 总结
+    * ![373732025928785431](https://github.com/LizzyDuan/LZ-notebook/assets/165522321/5bcc35cb-2f72-4c96-8732-64658a0fb5a8)
+       > **RAG Ecosystem**
+       >> Downstream Tasks : Dialogue, Question answering, Summarizatioin, Fact verification
+       >> Technology Stakes : Langchain, LlamaIndex, FlowiseAI, AutoGen
+       * > **The RAG Paradigm**
+         >> Naive RAG / Advanced RAG / Modular RAG
+         >>> The techniques for Better RAG
+         >>>> Chunk optimization, iterative retrieval, retriever fine-tuning, query transformation, recusive retrieval, generator fine-turning, context selection, adpative retrieval, dual fine-turning
+      * > **RAG Porspect**
+       >> Challenges: RAG in Long Context length, Hybrid, Robustness, Scaling-laws for RAG, Production-ready RAG
+       >> Modality Extension :  Image, Video, Audio, Code
+       >> Ecosystem : Customization, Simplification, Specialization
+      * > **Evaluation of RAG**
+       >> Evaluation Target: Retrieval Quality, Generation Quality
+       >> Evaluation Aspect: Answer Retrieval, Noise Robustness, Context Relevance, Negation Rejection, Info Integration, Answer Faithfulness, Couterfactual Robustness
+       >> Evaluation Framework:
+       >>> Benchmarks: CRUD, RGB, RECALL
+       >>> Tools: TruLens, RAGAS, ARES
   
 3. 茴香豆：介绍、特点、架构、构建步骤
-
+ ======================
+* **应用场景**：智能客服：技术支持、领域知识对话
+  > IM即时通讯工具中创建用户群组、讨论、解答相关问题
+* **场景难点**：群聊中信息量巨大，内容多样，技术讨论和闲聊都有
+* **核心特性**：
+  > 开源免费：BSD-3-Clasue免费商用
+  > 高效准确：Hybrid LLMs专为群聊优化
+  > 领域知识：应用RAG技术专业知识快速获取
+  > 部署成本低：无需额外训练，可利用云端模型api，本地算力需求少
+  > 安全：可完全本地部署，信息不上传，保护数据和用户隐私
+  > 扩展性强：兼容多种IM软件，支持多种开源LLMs和云端api
+* **构建**
+  > 专属知识库资料：pdf word等
+  > 前端：微信群、飞书群
+  > LLM后端：本地大模型（书生浦语/通义千问的模型格式；远端kimi）
+  > 豆哥：打通工作流
+  >> chat group（sentense） → preprocess(query) → rejection pipeline(query) → response pipeline（reply） → chat group
+  >> 完整工作流
+  >>> * 多来源检索 ：向量数据库、网络搜索结果、知识图谱
+  >>> * 混合大模型 ：本地LLM，远程LLM
+  >>> * 多重评分拒答工作流 ：回答有效、避免信息泛滥
+  >>> * 安全检查 ：多种手段、确保回答合规
+  
 4. 实践演示：茴香豆Web版、Intern Studio部署茴香豆知识助手
+   ==========================
+   作业截图
+   <img width="956" alt="image" src="https://github.com/LizzyDuan/LZ-notebook/assets/165522321/8d063c1d-feb8-4ecf-a758-aa71c23371ad">
+
 
 
 
